@@ -1,0 +1,748 @@
+
+
+body{
+    background-color:#00eeff;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+hr {
+    height: 4px;             
+    background-color: black; 
+    border: none;            
+    margin: 20px 0;          
+    opacity: 1;             
+}
+
+#T1 { 
+    display:flex;
+    justify-content: center;
+    color:white;
+    font-size: 35px; 
+    font-weight: bold;
+    text-align:center;
+    animation: coresPisca2 2s infinite; 
+}
+
+/* Configuração das cores e do brilho */
+@keyframes coresPisca2 {
+    0%, 100% {
+        color: rgb(0, 183, 255);
+        opacity: 1;
+        text-shadow: 2px 2px black;
+    }
+    25% {
+        color: rgb(255, 102, 0);
+        opacity: 1;
+        text-shadow: 2px 2px black;
+    }
+    50% {
+        color: rgb(0, 27, 63);
+        opacity: 1;
+        text-shadow: 2px 2px black;
+    }
+    70% {
+        color: rgb(214, 0, 125);
+        opacity: 1;
+        text-shadow: 2px 2px black;
+    }
+}
+
+#T2 {
+     color: white; margin-top: 20px; 
+    }
+
+
+
+
+/* Flexbox para colocar Pokedex na esquerda e Mesa na direita */
+.container-selecao {
+    display: flex;
+    justify-content: space-around; /* Cria o espaço entre os dois blocos */
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Estilo do Botão Reset (Pokedex) */
+.area-reset p { color: black; font-weight: bold; }
+.btnR {
+    background: none;
+    border: 4px solid black; /* Borda preta quadrada */
+    padding: 0;
+}
+.btnR img { width: 120px; display: block; }
+#txtreset{
+    color:white;
+}
+/* Estilo da Mesa */
+.area-mesa p { color: black; font-weight: bold; }
+#pokebolas {
+    display: flex;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    gap: 10px;
+    /* Imagem da textura de madeira que você enviou */
+    background-image: url('https://static.vecteezy.com/ti/fotos-gratis/p1/10753923-fundo-de-retangulo-de-textura-de-tinta-de-parede-de-emulsao-marrom-gratis-foto.JPG');
+    background-size: cover;
+}
+
+/* Estilo das Pokébolas */
+.btnP {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btnP:hover { transform: scale(1.2); }
+
+.btnP img {
+    width: 60px;
+    height: 60px;
+    border-radius: 70%;
+    border: 2px solid red; /* Círculo vermelho igual ao desenho */
+    background-color: white;
+}
+
+/*onde fica a mesa e os titulos*/
+header{
+    background-color:#00ffdd;
+}
+
+/*onde fica TUDO*/
+main{
+    background-image:url(POKEBOLA/fundoheader.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+footer{
+    margin:30px;
+    background-color: #00aeff;
+}
+/*botao de voltar*/
+.voltar{
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: purple;
+    color:white;
+    font-weight: bold;
+    padding:7px;
+    margin:3px; 
+}
+
+/* Pokedex (Reset) */
+#reset:hover {
+    cursor: url('cursores/pokedex.png') 32 32, auto;
+}
+/*cursores*/
+/* Froakie (Luís) */
+#luis:hover {
+    cursor: url('cursores/froakie.png') 32 32, auto;
+}
+
+/* Mudkip (Kayky) */
+#kayky:hover {
+    cursor: url('cursores/mudkip.png') 32 32, auto;
+}
+
+/* Oshawott (Matias) */
+#matias:hover {
+    cursor: url('cursores/oshawott.png') 32 32, auto;
+}
+
+/* Piplup (Isabella) */
+#isabella:hover {
+    cursor: url('cursores/piplup.png') 32 32, auto;
+}
+
+/* Fennekin (Vinícius) */
+#vinicius:hover {
+    cursor: url('cursores/fennekin.png') 32 32, auto;
+}
+
+.v1, .v2, .v3{
+    background-image: url('pokemons/fundo.jpg');
+
+    /*faz o fundo cobrir a imagem toda*/
+    background-position: center;
+
+    width: 250px;
+    height: 250px;
+
+    /*adiciona borda*/
+    border: 4px solid black;
+    border-radius: 15px;
+
+    object-fit: contain;
+
+    margin: 10px;
+    padding: 5px;
+}
+
+.mega{
+    
+
+     background-image: url('pokemons/megafundo.png');
+
+    /*faz o fundo cobrir a imagem toda*/
+    background-position: center;
+
+    width: 250px;
+    height: 250px;
+
+    /*adiciona borda*/
+    border: 4px solid black;
+    border-radius: 15px;
+
+    object-fit: contain;
+
+    margin: 10px;
+    padding: 5px;
+}
+
+.mensao{
+    padding-left:40%;
+    background-image: url('pokemons/ashgreninja.png');
+
+    /*faz o fundo cobrir a imagem toda*/
+    background-position: center;
+
+    width: 200px;
+    height: 250px;
+
+    /*adiciona borda*/
+    border: 4px solid rgb(207, 181, 59);
+    border-radius: 15px;
+
+    object-fit: contain;
+
+    margin: 10px;
+    padding: 5px;
+}
+
+/*o botao de reset*/
+
+/* Estilo da div central */
+#vazio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Ajuste conforme a altura da sua main */
+}
+
+/* Estilo do texto e a Animação */
+#vazioP {
+    font-size: 24px;
+    font-weight: bold;
+    /* nome da animação | duração | infinita */
+    animation: coresPisca 2s infinite; 
+}
+
+/* Configuração das cores e do brilho */
+@keyframes coresPisca {
+    0% {
+        color: rgb(255, 0, 13);
+        opacity: 1;
+        text-shadow: 2px 2px black;
+    }
+    33% {
+        color: rgb(255, 102, 0);
+        opacity: 1;
+        text-shadow: 2px 2px black;
+    }
+    66% {
+        color: rgb(0, 110, 255);
+        opacity: 1;
+        text-shadow: 2px 2px black;
+    }
+    100% {
+        color: rgb(217, 255, 0);
+        opacity: 1;
+        text-shadow: 2px 2px black;
+    }
+}
+
+/*ORGANIZANDO O FROAKIE*/
+#mainTituloP1 {
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px #5900ff;
+}
+
+/* Container principal que segura tudo do Froakie */
+#divP1 {
+    background-color:#034643;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* --- ESTILO DAS FILEIRAS (V1, V2, V3) --- */
+#froakiev1, #froakiev2, #froakiev3 {
+    display: flex;
+    flex-direction: row; /* Alinha Imagem, Wiki e Build lado a lado */
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+/* Configuração das Imagens Circulares */
+.v1, .v2, .v3, .mega, .mensao {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Deixa redondo como no desenho */
+    border: 5px solid black;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Ajuste específico para o Greninja (V3) por causa da pose */
+.v3 {
+    object-position: 40% center;
+}
+
+/* Retângulo da Wiki (O do meio no rascunho) */
+.wikibase {
+    border: 4px solid rgb(14, 1, 202);
+    padding: 15px;
+    width: 380px;
+    min-height: 120px;
+    background-color: rgba(0, 195, 255, 0.623); /* Um fundo leve para leitura */
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Retângulo da Build (O da direita com ataques) */
+.build1, .build2, .build3 {
+    background-color:#00ffff;
+    border: 4px solid rgb(5, 3, 31);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria as duas colunas de ataques */
+    gap: 10px;
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+}
+
+.build1 p, .build2 p, .build3 p {
+    border-bottom: 1px dashed rgb(0, 23, 128); /* Linha embaixo do ataque */
+    margin: 5px 0;
+}
+
+/* --- MEGA E MENÇÃO HONROSA --- */
+
+/* Mega: Imagem na esquerda, texto na direita */
+#froakiemega {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    width: 80%;
+}
+
+.divMega {
+    border: 4px solid rgb(98, 0, 255); /* Borda vermelha do rascunho */
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 195, 255, 0.623);
+    flex-grow: 1;
+}
+
+/* Menção Honrosa: Imagem em cima, texto embaixo */
+#ash {
+    display: flex;
+    flex-direction: column; /* Joga o texto para baixo da imagem */
+    align-items: center;
+    margin-top: 40px;
+}
+
+#ashgreninjadiv {
+    border: 4px dashed rgb(207, 181,59);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 300px;
+    margin-top: 15px;
+    text-align: center;
+    background-color: rgb(0, 0, 128);
+}
+
+/*deixa o titulo de melhores ataques dourado*/
+.ma{
+    color:rgb(207, 181, 59);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:smaller;
+    background-color: rgb(0, 0, 128);
+}
+
+/*organizando a fennekin*/
+
+/* Título Fennekin */
+#mainTituloP2 {
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px #ff4500; /* Sombra laranja avermelhada */
+}
+
+/* Container principal da Fennekin */
+#divP2 {
+    display:none;
+    background-color:#520702;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* --- ESTILO DAS FILEIRAS (V1, V2, V3) --- */
+#fennekinv1, #fennekinv2, #fennekinv3 {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+
+/* Retângulo da Wiki Fennekin (Tons de Laranja) */
+.wikibaseF {
+    border: 4px solid #8b0000; /* Vermelho escuro */
+    padding: 15px;
+    width: 380px;
+    min-height: 120px;
+    background-color: rgba(255, 69, 0, 0.6); /* Laranja fogo semi-transparente */
+    border-radius: 10px;
+    text-align: left;
+    color: white;
+}
+
+/* Retângulo da Build Fennekin */
+.buildF1, .buildF2, .buildF3 {
+    background-color: #523f02;
+    border: 4px solid #3d0000; /* Quase preto/marrom queimado */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+    background-color: rgba(20, 0, 0, 0.4);
+    color: white;
+}
+
+.buildF1 p, .buildF2 p, .buildF3 p {
+    border-bottom: 1px dashed #ff8c00; /* Linha laranja pontilhada */
+    margin: 5px 0;
+}
+
+/* --- MEGA FENNEKIN --- */
+
+#fennekinemega {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    width: 80%;
+}
+
+.megaF {
+    background-image: url(fennekin/megafundo.png);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #ff4500;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.divMegaF {
+    border: 4px solid #ff0000; /* Borda Vermelha */
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 140, 0, 0.7); /* Laranja forte */
+    color: white;
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+/* Título de melhores ataques da Fennekin (Dourado sobre fundo fogo) */
+.maf {
+    color: rgb(255, 215, 0); /* Ouro */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    background-color: #8b0000; /* Fundo vermelho escuro */
+    font-weight: bold;
+    padding: 2px;
+}
+
+
+/*organizando mudkip*/
+/* Título MUDKIP */
+#mainTituloP3 {
+    color: rgb(139, 2, 2);
+    font-size: 30px;
+    text-shadow: 2px 2px #00ffff; /* Sombra laranja avermelhada */
+}
+
+/* Container principal da MUDKIP */
+#divP3 {
+    display: none;
+    background-color:#033e46;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* --- ESTILO DAS FILEIRAS (V1, V2, V3) --- */
+#mudkipv1, #mudkipv2, #mudkipv3 {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+
+/* Retângulo da Wiki mudkip (Tons de Laranja) */
+.wikibaseM {
+    border: 4px solid #8b0000; /* Vermelho escuro */
+    padding: 15px;
+    width: 380px;
+    min-height: 120px;
+    background-color: rgba(9, 194, 250, 0.774); /* Laranja fogo semi-transparente */
+    border-radius: 10px;
+    text-align: left;
+    color: white;
+}
+
+/* Retângulo da Build mudkip */
+.buildM1, .buildM2, .buildM3 {
+    background-color: #033e46;
+    border: 4px solid #17003d; /* Quase preto/marrom queimado */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+    background-color: rgba(0, 5, 20, 0.4);
+    color: white;
+}
+
+.buildM1 p, .buildM2 p, .buildM3 p {
+    border-bottom: 1px dashed #00a2ff; /* Linha laranja pontilhada */
+    margin: 5px 0;
+}
+
+/* --- MEGA mudkip --- */
+
+#mudkipmega {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    width: 80%;
+}
+
+.megaM {
+    background-image: url(fennekin/megafundo.png);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #ff0000;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.divMegaM {
+    border: 4px solid #0400ff; 
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 30, 0, 0.493); 
+    color: white;
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+/* Título de melhores ataques do mudkip*/
+.mam {
+    color: rgb(47, 0, 255); 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    background-color: #0a7bd8da; /* Fundo vermelho escuro */
+    font-weight: bold;
+    padding: 2px;
+}
+
+
+/*organizando piplup*/
+/* Título piplup */
+#mainTituloP4 {
+    color: rgb(2, 130, 139);
+    font-size: 30px;
+    text-shadow: 2px 2px #1100ff; 
+}
+
+/* Container principal da piplup */
+#divP4 {
+    display: none;
+    background-color:#610161;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* --- ESTILO DAS FILEIRAS (V1, V2, V3) --- */
+#piplupv1, #piplupv2, #piplupv3 {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+
+/* Retângulo da Wiki piplup */
+.wikibaseP {
+    border: 4px solid #8b002a; /* Vermelho escuro */
+    padding: 15px;
+    width: 380px;
+    min-height: 120px;
+    background-color: rgba(170, 118, 5, 0.753); 
+    border-radius: 10px;
+    text-align: left;
+    color: white;
+}
+
+/* Retângulo da Build piplup */
+.buildP1, .buildP2, .buildP3 {
+    background-color: #46031f;
+    border: 4px solid #ff0040; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+    background-color: rgba(0, 5, 20, 0.4);
+    color: white;
+}
+
+.buildP1 p, .buildP2 p, .buildP3 p {
+    border-bottom: 1px dashed #ff0000; /* Linha pontilhada */
+    margin: 5px 0;
+}
+
+
+/* Título de melhores ataques do PIPLUP*/
+.map {
+    color: rgb(255, 255, 255); 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    background-color: #b60ad8da; /* Fundo */
+    font-weight: bold;
+    padding: 2px;
+}
+
+/*ORGANIZANDO O DE MATIAS(JA TO ENLOQUECENDO)*/
+
+/* Título oshawoot */
+#mainTituloP5 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-shadow: 2px 2px #3b0119; 
+}
+
+/* Container principal da piplup */
+#divP5 {
+    display: none;
+    background-color:#3b0119;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* --- ESTILO DAS FILEIRAS (V1, V2, V3) --- */
+#pv1, #pv2, #pv3 {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+
+/* Retângulo da Wiki oshawott */
+.wikibaseo {
+    border: 4px solid #29024d; 
+    padding: 15px;
+    width: 380px;
+    min-height: 120px;
+    background-color: rgba(133, 0, 122, 0.753); 
+    border-radius: 10px;
+    text-align: left;
+    color: white;
+}
+
+/* Retângulo da Build oshawott */
+.buildo1, .buildo2, .buildo3 {
+    background-color: #004d06;
+    border: 4px solid #020641; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+    background-color: rgba(0, 5, 20, 0.4);
+    color: white;
+}
+
+.buildo1 p, .buildo2 p, .buildo3 p {
+    border-bottom: 1px dashed #ff0000; /* Linha pontilhada */
+    margin: 5px 0;
+}
+
+
+/* Título de melhores ataques do xota xota xota*/
+.mao {
+    color: rgb(255, 255, 255); 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    background-color: #26012eda; /* Fundo */
+    font-weight: bold;
+    padding: 2px;
+}
+
+.pokemon-info {
+    flex-direction: column;
+    width: 100%;
+}
